@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    height: 100vh;
+    margin: 0;
+    padding-top: 40px;
+    padding-bottom: 44px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+a {
+    color: white;
+    transition: all .15s ease;
+}
+
+a:hover {
+    opacity: .8;
+}
+
+#igLogo {
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: fixed;
+    right: 70px;
+    bottom: 44px;
+}
+
+#igLogo img {
+    display: block;
+}
+
+.main-container {
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.bg-cover {
+    width: 100%;
+    height: 100%;
+    background: black;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: .4;
+}
+
+#timeDisplay {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 130px;
+    font-weight: bold;
+}
+
+#form {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 413px;
+    margin: 0 auto;
+}
+
+#form *,
+#searchInputGroup:after {
+    transition: all .5s ease;
+}
+
+#searchIcon {
+    width: 36px;
+    margin-right: 15px;
+    transform: scale(1);
+}
+
+#searchInputGroup {
+    flex: 1;
+    border-bottom: 1px solid #fff;
+    position: relative;
+}
+
+#searchInputGroup:after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    display: block;
+    position: absolute;
+    left: 0px;
+    bottom: -2px;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: left bottom;
+}
+
+#form.focus>#searchInputGroup:after {
+    transform: scaleX(1);
+}
+
+#searchInput {
+    font-family: "Roboto", sans-serif;
+    display: block;
+    color: white;
+    font-size: 32px;
+    border: none;
+    background: transparent;
+}
+
+#form.focus>#searchIcon {
+    transform: scale(.8);
+}
+
+
+#searchInput:focus {
+    outline: none;
+}
+
+.date-show {
+    font-size: 32px;
+}
+
+.divider {
+    font-size: 14px;
+    display: inline-block;
+    margin: 0 6px;
+    font-weight: 300;
+}
+
+.weekday-show {
+    font-size: 20px;
+    margin-top: 15px;
+    display: block;
+}
+
+#quoteTitle {
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+#copyRight {
+    margin: 0px;
+    font-size: 8px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-bottom: 64px;
+    }
+
+    #quoteTitle {
+        width: 300px;
+        margin: 0 auto;
+        margin-bottom: 12px;
+    }
+
+    #igLogo {
+        bottom: 25px;
+        left: 0px;
+        right: 0px;
+        margin: 0 auto;
+    }
+}

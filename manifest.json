@@ -1,0 +1,45 @@
+{
+    "manifest_version": 3,
+    "name": "love-oreooo",
+    "version": "1.0.0",
+    "description": "This extension features a collection of adorable photos of Oreo.",
+    "icons": {
+        "128": "favicon/favicon.png"
+    },
+    "permissions": [],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "lib/moment.js",
+                "images/search_icon.svg",
+                "images/ig_logo.svg",
+                "images/img_01.jpg",
+                "images/img_02.jpg",
+                "images/img_03.jpg",
+                "images/img_04.jpg",
+                "images/img_05.jpg",
+                "images/img_06.jpg",
+                "images/img_07.jpg",
+                "images/img_08.jpg",
+                "images/img_09.jpg",
+                "images/img_10.jpg",
+                "images/img_11.jpg",
+                "images/img_12.jpg",
+                "images/img_13.jpg",
+                "images/img_14.jpg",
+                "images/img_15.jpg",
+                "images/img_16.jpg",
+                "images/img_17.jpg",
+                "images/img_18.jpg",
+                "images/img_19.jpg",
+                "images/img_20.jpg"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ],
+    "chrome_url_overrides": {
+        "newtab": "newtab.html"
+    }
+}
