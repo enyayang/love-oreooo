@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "love-oreooo",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "This extension features a collection of adorable photos of Oreo.",
     "icons": {
         "128": "favicon/favicon.png"

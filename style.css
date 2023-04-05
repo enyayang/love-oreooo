@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-#mockup {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    z-index: 5;
-    opacity: .4;
-    display: none;
-}
-
 * {
     box-sizing: border-box;
 }
