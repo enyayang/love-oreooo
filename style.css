@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+#mockup {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: 5;
+    opacity: .4;
+    display: none;
+}
 
 * {
     box-sizing: border-box;
@@ -9,7 +18,7 @@ body {
     font-family: "Roboto", sans-serif;
     height: 100vh;
     margin: 0;
-    padding-top: 40px;
+    padding-top: 0px;
     padding-bottom: 44px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -49,6 +58,14 @@ a:hover {
     z-index: 1;
 }
 
+.top-area {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 76vh;
+    justify-content: center;
+}
+
 .bg-cover {
     width: 100%;
     height: 100%;
@@ -60,26 +77,29 @@ a:hover {
 }
 
 #timeDisplay {
+    line-height: .8;
     margin-top: 0px;
     margin-bottom: 0px;
-    font-size: 130px;
+    font-size: 115px;
     font-weight: bold;
 }
 
 #form {
     display: flex;
     flex-direction: row-reverse;
-    width: 413px;
+    width: 300px;
     margin: 0 auto;
+    margin-top: 43px;
+    position: relative;
 }
 
-#form *,
+#form #searchIcon,
 #searchInputGroup:after {
     transition: all .5s ease;
 }
 
 #searchIcon {
-    width: 36px;
+    width: 21px;
     margin-right: 15px;
     transform: scale(1);
 }
@@ -108,10 +128,11 @@ a:hover {
 }
 
 #searchInput {
+    width: 100%;
     font-family: "Roboto", sans-serif;
     display: block;
     color: white;
-    font-size: 32px;
+    font-size: 18px;
     border: none;
     background: transparent;
 }
@@ -123,6 +144,10 @@ a:hover {
 
 #searchInput:focus {
     outline: none;
+}
+
+#dateGroup {
+    margin-top: 30px;
 }
 
 .date-show {
@@ -142,15 +167,106 @@ a:hover {
     display: block;
 }
 
+#searchEngineToggleGroup {
+    width: 25px;
+    height: 13px;
+    position: absolute;
+    right: 0px;
+    bottom: 8px;
+}
+
+#currentSearchEngineGroup {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    border: none;
+    text-align: left;
+    padding: 0px 0px;
+    cursor: pointer;
+    transition: all .15s ease;
+}
+
+#currentSearchEngineGroup:hover {
+    opacity: .7;
+}
+
+
+#currentSearchEngineGroup #currentSearchEngineImg {
+    height: 13px;
+    display: block;
+}
+
+#currentSearchEngineGroup #chev {
+    width: 7px;
+    display: block;
+}
+
+#searchEnginesToggleList {
+    display: none;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    right: 0px;
+    top: 28px;
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, .1);
+}
+
+#searchEnginesToggleList li {
+    width: 92px;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+#searchEnginesToggleList li button {
+    width: 100%;
+    height: 35px;
+    align-items: center;
+    display: flex;
+    background: white;
+    color: #868686;
+    font-weight: 700;
+    border: none;
+    padding: 0px;
+    padding-left: 9px;
+    cursor: pointer;
+    transition: all .15s ease;
+}
+
+#searchEnginesToggleList li button:hover {
+    background: #F2EDED;
+}
+
+#searchEnginesToggleList li:first-child {
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: 2;
+}
+
+.full-color-div {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+}
+
 #quoteTitle {
-    font-size: 18px;
+    font-size: 23px;
     margin-top: 0px;
     margin-bottom: 10px;
 }
 
 #copyRight {
     margin: 0px;
-    font-size: 8px;
+    font-size: 9px;
 }
 
 @media (max-width: 768px) {

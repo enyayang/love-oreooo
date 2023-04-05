@@ -8,18 +8,46 @@
     <link rel="shortcut icon" href="favicon/favicon.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Love Oreooo</title>
+    <script src="lib/jquery.min.js"></script>
     <script src="lib/moment.min.js"></script>
 </head>
 
 <body>
+    <img id="mockup" src="./mockups/mockup-1265x625.png" alt="">
     <div class="main-container">
         <header class="top-area">
             <h1 id="timeDisplay">21:59</h1>
             <form id="form">
                 <div id="searchInputGroup">
-                    <input type="text" id="searchInput">
+                    <input type="text" id="searchInput" autocomplete="off">
                 </div>
                 <img id="searchIcon" src="images/search_icon.svg" alt="Search Icon">
+                <div id="searchEngineToggleGroup">
+                    <button type="button" id="currentSearchEngineGroup">
+                        <img src="./images/google.png" alt="" id="currentSearchEngineImg">
+                        <img src="./images/chev.svg" alt="chev" id="chev">
+                    </button>
+                    <ul id="searchEnginesToggleList">
+                        <li>
+                            <button type="button" data-search-mode="google">
+                                <div class="full-color-div">
+                                    <img src="./images/google_full_color.svg" alt="google_full_color"
+                                        class="full-color-icon">
+                                </div>
+                                Google
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" data-search-mode="bing">
+                                <div class="full-color-div">
+                                    <img src="./images/bing_full_color.svg" alt="bing_full_color"
+                                        class="full-color-icon">
+                                </div>
+                                Bing
+                            </button>
+                        </li>
+                    </ul>
+                </div>
             </form>
             <div id="dateGroup">
                 <h2 id="dateDisplay">
@@ -49,8 +77,6 @@
         </a>
     </div>
     <div class="bg-cover"></div>
-
-
     <script src="content.js"></script>
 </body>
 

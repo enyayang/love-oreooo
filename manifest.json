@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "love-oreooo",
-    "version": "1.0.0",
+    "version": "1.0.6",
     "description": "This extension features a collection of adorable photos of Oreo.",
     "icons": {
         "128": "favicon/favicon.png"
@@ -10,6 +10,7 @@
     "web_accessible_resources": [
         {
             "resources": [
+                "lib/jquery.min.js",
                 "lib/moment.js",
                 "images/search_icon.svg",
                 "images/ig_logo.svg",

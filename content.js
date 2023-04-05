@@ -16,10 +16,32 @@ searchInput.addEventListener("blur", function () {
     form.classList.remove("focus");
 });
 
+const searchModeMap = {
+    google: {
+        name: "Google",
+        urlBase: "https://www.google.com/search?q=",
+        image: "./images/google.png"
+    },
+    bing: {
+        name: "Bing",
+        urlBase: "https://www.bing.com/search?q=",
+        image: "./images/bing.png"
+    }
+}
+
+let currentSearchMode = searchModeMap["google"];
+
+function renderSearchMode() {
+    $("#currentSearchEngineImg").attr("src", currentSearchMode.image);
+    $("#currentSearchEngineImg").attr("alt", currentSearchMode.name);
+}
+
+renderSearchMode();
+
 form.addEventListener('submit', (event) => {
     event.preventDefault(); // 防止表單送出導致頁面刷新
     const searchValue = searchInput.value;
-    const searchUrl = `https://www.google.com/search?q=${searchValue}`;
+    const searchUrl = `${currentSearchMode.urlBase}${searchValue}`;
     window.location.href = searchUrl; // 改變當前頁面的 URL，使其變成 Google 搜尋結果頁面
 });
 
@@ -59,3 +81,14 @@ const quoteList = [
 const quote = quoteList[Math.floor(Math.random() * quoteList.length)];
 document.getElementById("quoteTitle").textContent = `"${quote}"`;
 
+$("#currentSearchEngineGroup").click(function () {
+    $("#searchEnginesToggleList").fadeToggle(300);
+});
+
+$("#searchEnginesToggleList>li>button").click(function () {
+    const newSearchModeName = $(this).attr("data-search-mode");
+    currentSearchMode = searchModeMap[newSearchModeName];
+    renderSearchMode();
+    $("#searchEnginesToggleList").fadeOut(300);
+    $("#searchInput").focus();
+});
